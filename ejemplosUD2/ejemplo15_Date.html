@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        var data = new Date();
+        var array_mes = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+        var array_dias_semana = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+        console.log('Hoy es ' + array_dias_semana[data.getDay()] + ', ' + data.getDate() + ' de ' + array_mes[data.getMonth()] + ' de ' + data.getFullYear());
+
+        //para ver el número de ms desde el origen de los tiempos (1 de enero de 1970 00:00:00):
+        var data = new Date();
+        console.log(data.getTime());
+        // o también
+        console.log(Date.now());
+
+        var d1 = Date.parse("23 March 2016"); //parse interpreta distintos formatos de fecha pero en inglés
+        var d2 = Date.parse("28 May 2016");
+        console.log(d1);
+        console.log(d2);
+        console.log(d1>d2); //podemos comparar fechas para ver cuál es anterior o posterior
+
+        var data = new Date();
+        console.log(data.getHours()); //hora real.
+        console.log(data.getUTCHours()); //hora UTC
+
+        var d = new Date();
+        //Día del trabajo
+        d.setDate(1);
+        d.setMonth(4); //representa el mes de mayo
+        d.setFullYear(2016);
+        console.log(d);
+        console.log(d.toDateString()); //Sun May 01 2016
+        console.log(d.toLocaleDateString()); //1/5/2016
+
+        //toLocaleDateString() retorna una cadena, y sobre ella podemos utilizar las funciones de cadena:
+        var array_data = d.toLocaleDateString().split('/');
+        console.log(array_data[0]); //dia
+        console.log(array_data[1]); //mes
+        console.log(array_data[2]); //any
+
+        var d = new Date();
+        console.log(d.toLocaleString()); // 2/5/2016, 14:44:37
+        console.log(d.toLocaleDateString()); // 2/5/2016
+        console.log(d.toLocaleTimeString()); // 14:44:37
+
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

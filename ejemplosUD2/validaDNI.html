@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        function validarDNI(dni) {
+            var letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+
+            if(dni.length == 9)
+            {
+                var num_dni=dni.substr(0,dni.length-1);
+
+                //var letra_dni=dni.substr(dni.length-1,1).toUpperCase();
+
+                var letra_dni=dni.charAt(dni.length-1).toUpperCase();
+                
+                if (letras.charAt(num_dni % 23)==letra_dni) return true;
+                
+                console.log(letra_dni);
+                console.log(num_dni%23);
+                
+                return false;
+            }
+            else
+                return false;
+        }
+
+        console.log(validarDNI('38540343T')); //false
+        console.log(validarDNI('05923915N')); //true
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        var patron1 = /CIFP/i
+        var patron2 = /CIFP/
+        var cad="Curso de JS del CIFP Virgen de Gracia";
+
+        console.log(patron1.test(cad));
+        console.log(patron2.test(cad));
+
+        var res = cad.match(patron1);
+        console.log(res.length); //1, una sola ocurrencia
+        console.log(res[0]); //CIFP
+
+        //Expresión regular para ver si una fecha cumple con el formato día mes y año
+        regexp = /^(3[01]|[12][0-9]|0?[1-9])\/(1[0-2]|0?[1-9])\/([0-9]{2})?[0-9]{2}$/;
+        console.log(regexp.test("01/01/2016")); //true
+        console.log(regexp.test("2016/01/01")); //false
+        console.log(regexp.test("01/01/16")); //true
+        console.log(regexp.test("1/1/16")); //true
+        console.log(regexp.test("CIFP")); //false
+
+        //Ejemplo para validar una tarjeta de crédito
+        regexp = /^[0-9]{4}(-|\s)[0-9]{4}(-|\s)[0-9]{4}(-|\s)[0-9]{4}$/;
+        console.log(regexp.test("3782-8224-6310-0067")); //true
+        console.log(regexp.test("3782 8224 6310 0067")); //true
+        console.log(regexp.test("3782*8224*6310*0067")); //false
+        console.log(regexp.test("37828224630006")); //false
+
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

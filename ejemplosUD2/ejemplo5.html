@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+        var a = 100;
+        a = ((a + 10 - 15 ) * 10 / 2 ) % 2;
+        console.log (a);
+
+        var cad1 = "Curso de JS";
+        var cad2 = " del CIFP Virgen de Gracia";
+        var cad = cad1 + cad2; // Curso de JS del CIFP VG
+        console.log (cad);
+
+        console.log (a + cad);
+        console.log (cad + a);
+
+        var a = 10;
+        var b = 10;
+        var c = 20;
+        var d = "10";
+
+        console.log (a == c); // false
+        console.log (a === b); // true
+        console.log (a == d); // true
+        console.log (a === d); // false
+        console.log (a != c); // true
+        console.log (a !== d); // true
+
+        var cad1 = "avión";
+        var cad2 = "vuelo";
+        console.log (cad1 > cad2); // false
+
+        var a = 10;
+        var cad1 = "10";
+        var cad2 = "15";
+        var str = "coche";
+
+        console.log (a < cad2); // true. el '15' es convertido a 15
+        console.log (a == str); // false. La cadena 'coche' no es un número
+        console.log (cad1 < cad2); // true. Los dos son cadenas y se compara por carácter
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

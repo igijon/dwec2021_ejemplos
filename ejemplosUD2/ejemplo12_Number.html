@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        console.log((18).toString() + (20).toString());
+
+        var x = 234.456;
+        console.log(typeof x); //number
+        console.log (Number.isInteger(x)); //false
+        console.log (x.toExponential());
+        x = x.toFixed(2); // 234.46, redondea de la forma esperada
+        console.log(x);
+        console.log(typeof x); //x ahora es un string
+        x = parseFloat(x);
+        console.log(typeof x); //number. Vuelve a ser un número
+
+        x = x.toPrecision(6); //234.460
+        console.log(x);
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>
