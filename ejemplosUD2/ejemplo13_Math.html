@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        // Función que devuelve un número aleatorio entre 0 (incluído) y 1 (excluido)
+        function getRandom() {
+            return Math.random();
+        }
+
+        // Función que devuelve un número aleatorio entre min (incluído) y max (excluido)
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        // Función que devuelve un número entero aleatorio entre min (incluído) y max (excluído)
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        // Función que devuelve un número entero aleatorio entre min (incluído) y max (incluído)
+        function getRandomIntInclusive(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log('\nNúmero aleatorio entre 0 (incluído) y 1 (excluído)');
+        for (let i=0; i<10; i++) {
+            console.log(getRandom());
+        }
+
+        console.log('\nNúmero aleatorio entre 1 (incluído) y 5 (excluído)');
+        for (let i=0; i<10; i++) {
+            console.log(getRandomArbitrary(1,5));
+        }
+
+        console.log('\nNúmero entero aleatorio entre 1 (incluído) y 5 (excluído)');
+        for (let i=0; i<10; i++) {
+            console.log(getRandomInt(1,5));
+        }
+
+        console.log('\nNúmero entero aleatorio entre 1 (incluído) y 5 (excluído)');
+        for (let i=0; i<10; i++) {
+            console.log(getRandomIntInclusive(1,5));
+        }
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

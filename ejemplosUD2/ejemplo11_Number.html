@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        var a = 20;
+        var b = -2.718;
+        var c = 1e4;
+        var d = 2.23e-3
+
+        console.log(0b1010);
+        console.log(0xFF);
+
+        var num = 76;
+        console.log(num.toString(16) + " en hexadecimal");
+        console.log(num.toString(8) + " en octal");
+        console.log(num.toString(2) + " en binario");
+
+        console.log (5/0); //devuelve Infinity
+
+        console.log(3*"a"); //NaN. Recordamos que 3+"a" retorna "3a"
+        console.log(isNaN(3*4)); //false
+        console.log(isNaN(3*"a")); //true
+
+        var x = 25; //Tipos primitivos
+        var y = new Number(25); //objeto
+        console.log(typeof x); //number
+        console.log(typeof y); //objeto
+
+        console.log (x == y); //true
+        console.log (x === y); //false
+
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

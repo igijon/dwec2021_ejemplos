@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+
+        var data = new Date(); //fech del sistema
+        console.log(data);
+        var data = new Date(34885453664); //genera una fecha que representa los milisegundos que han pasado desde el 1 de enero de 1970
+        console.log(data);
+        data = new Date('2016/05/23');
+        console.log(data);
+        data = new Date(2016,5,23,12,15,24,220);  //año, mes, día, hora, minutos ,segundos, ms
+        console.log(data);
+
+        var data = new Date(); //fecha del sistema
+        console.log(data.getTime()); //ms
+        console.log('Desde 1970 han pasado ' + data.getTime()/1000/3600/24/365 + ' años aproximadamente');
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+        var str = "Curso de JS de CIFP Virgen de Gracia";
+        var cad = "";
+        var i = 0;
+        var res = "";
+
+        while (res != 'i') {
+            res = str.charAt(i);
+            cad += res;
+            i++;
+        }
+
+        console.log (cad);
+
+        str = "Curso de JS de CIFP Virgen de Gracia";
+        cad = "";
+        i = 0;
+        res = "";
+
+        do {
+            res = str.charAt(i); 
+            cad += res; 
+            i++;
+        } while (res != 'i')
+
+        console.log (cad);
+
+        // =======================
+
+        str = "Curso de JS de CIFP Virgen de Gracia";
+        cad = "";
+        i = 0;
+        res = str.charAt(i);
+
+        while (res != 'c') { 
+            cad += res;
+            i++;
+            res = str.charAt(i);
+        }
+
+        console.log (cad);
+
+        str = "Curso de JS del CIFP Virgen de Gracia";
+        cad = "";
+        i = 0;
+        res = str.charAt(i);
+
+        do {
+            cad += res;
+            i++;
+            res = str.charAt(i);
+        } while (res != 'c')
+
+        console.log (cad);
+
+        // =======================
+
+        str = "Curso de JS del CIFP Virgen de Gracia";
+        cad = "";
+        i = 0;
+        res = "";
+
+        while (res != 'i') {
+            res = str.charAt(i);
+            if (res == 'a') break;
+            cad += res;
+            i++;
+        }
+
+        console.log (cad);
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+        var animal = { id : 345, nombre : "Perro", clase : "Mamíferos", familia : "Cánidos" };
+
+        console.log (animal.id)
+
+        var animal = { 
+            id : 345,
+            nombre : "Perro",
+            clase : "Mamíferos",
+            familia : "Cánidos",
+            get_taxo : function() {
+                return this.clase + " - " + this.familia;
+            }
+        };
+
+        console.log (animal.get_taxo());
+
+        var animal = "Águila";
+        console.log (animal);
+        console.log (animal.length);
+        console.log (animal.toUpperCase());
+
+        var animal = "Águila"
+        console.log (animal);
+        console.log (typeof(animal));
+
+        var vegetal = new String("acelga");
+        console.log (vegetal);
+        console.log (typeof(vegetal));
+
+        var x = 234.6789;
+        console.log (x.toFixed(2));
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

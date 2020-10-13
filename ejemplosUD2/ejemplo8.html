@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+        var mes;
+
+        switch (new Date().getMonth()) {
+            case 0:
+                mes = "Enero";
+                estacio = "Invierno";
+                break;
+            case 1:
+                mes = "Febrero";
+                estacio = "Invierno";
+                break;
+            case 2:
+                mes = "Marzo";
+                estacio = "Invierno";
+                break;
+            case 3:
+                mes = "Abril";
+                estacio = "Primavera";
+                break;
+            case 4:
+                mes = "Mayo";
+                estacio = "Primavera";
+                break;
+            case 5:
+                mes = "Junio";
+                estacio = "Primavera a verano";
+                break;
+            case  6:
+                mes = "Julio";
+                estacio = "Verano";
+                break;
+            case  7:
+                mes = "Agosto";
+                estacio = "Verano";
+                break;
+            case  8:
+                mes = "Septiembre";
+                estacio = "Verano a otoño";
+                break;
+            case  9:
+                mes = "Octubre";
+                estacio = "Otoño";
+                break;
+            case  10:
+                mes = "Noviembre";
+                estacio = "Otoño";
+                break;
+            case  11:
+                mes = "Diciembre";
+                estacio = "Otoño a invierno";
+                break;
+            default:
+                console.log ("En este caso el código no pasará por aquí porque todos los casos están contemplados.");
+        }
+
+        console.log ("Mes: " + mes);
+        console.log ("Estación: " + estacio);
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

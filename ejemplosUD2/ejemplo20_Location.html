@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Location. Propiedades y métodos</title>
+        <script type="text/javascript">
+        function assign_url () {
+            document.location.assign('http://cifpvirgendegracia.com');
+        }
+        function reload_url () {
+            document.location.reload();
+        }
+        function replace_url () {
+            document.location.replace('http://www.google.com'); 
+        }
+        console.log('location.hash: ' + location.hash);
+        console.log('location.hostname: ' + location.hostname);
+        console.log('location.href: ' + location.href);
+        console.log('location.origin: ' + location.origin);
+        console.log('location.pathname: ' + location.pathname);
+        console.log('location.port: ' + location.port);
+        console.log('location.protocol: ' + location.protocol);
+        console.log('location.search: ' + location.search);
+        </script>
+    </head>
+    <body>
+    <a href="https://cifpvirgendegracia.com">CIFP</a><br />
+    <img src="https://cifpvirgendegracia.com/wp-content/uploads/2019/11/LogoIcon.png" /img><br />
+    <button onclick="assign_url();">Método location.assign</button>
+    <button onclick="reload_url();">Método location.reload</button>
+    <button onclick="replace_url();">Método location.replace</button>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+        var year = 2016;
+        mostrar_info (year);
+ 
+        var d = new Date();
+        year = d.getFullYear();
+        mostrar_info (year);
+ 
+        var num = 2500*Math.random()
+        year = parseInt(num);
+        mostrar_info (year);
+ 
+        function mostrar_info( year ) {
+	        if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) {
+	 	        console.log ("El año " +  year + " es un año bisiesto.\nPero no todos los años bisiestos son divisibles por 4.\nEl año 2000 no es bisiesto");
+	 	        document.write ("El año " +  year + " es un año bisiesto.<br/>Pero no todos los años bisiestos son divisibles por 4.<br/>El año 2000 no es bisiesto<br/>");
+	        } else {
+	  	        console.log ("El año " +  year + " no es bisiesto.");
+	 	        document.write ("El año " +  year + " no es bisiesto.");
+	        }
+        }
+
+    </script>
+    
+    <body>
+        <h1>Tipos de datos</h1>
+    </body>
+</html>

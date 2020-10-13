@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Tipos de datos</title>
+    </head>
+    
+    <script>
+        
+        function pum(i) {
+            var juego = document.getElementById("juego");
+                if (i%7==0) {
+                    var element = document.createElement("span");
+                    var texto = document.createTextNode("Pum!!</br>");
+                    element.appendChild(texto);   
+                    juego.appendChild(element);
+                }            
+        }
+    </script>
+    
+    <body onload="pum(7)">
+        <h1>Tipos de datos</h1>
+        <p id="juego"></p>
+    </body>
+</html>
