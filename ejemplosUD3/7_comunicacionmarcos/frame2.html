@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>iframe 2</title>
+        <script>
+            function funcion2() {
+            var ifrm1 = parent.document.getElementById('iframe1');
+            var ifrm2 = parent.document.getElementById('iframe2');
+            var win1 = ifrm1.contentDocument;
+            var win2 = ifrm2.contentDocument;
+            console.log(win2);
+            var doc1 = ifrm1.contentDocument? ifrm1.contentDocument: ifrm1.contentWindow.document;
+            var doc2 = ifrm2.contentDocument? ifrm2.contentDocument: ifrm2.contentWindow.document;
+            console.log (doc2);
+            var fld2 = doc2.forms[0].elements[0];
+            console.log(fld2);
+            var valor2 = fld2.value;
+            console.log(valor2);
+            doc1.forms[0].elements[0].value = valor2;
+            ifrm1.style.height = valor2 + 'px';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>iframe 2</h1>
+        <form>
+            <input id="txt2" type="text" />
+            <button onclick="funcion2()">Pasar al frame 1 y cambiar la altura</button>
+        </form>
+    </body>
+</html>
