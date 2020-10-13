@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Cookies</title>
+        <script>
+            function cargarCookies() {
+                var nom_cookie, valor_cookie;
+                var temp;
+                var array_cookies = document.cookie.split('; ');
+                for(var i = 0; i < array_cookies.length; i++) {
+                    temp = array_cookies[i].split('=');
+                    nom_cookie = temp[0];
+                    valor_cookie = temp[1];
+                    
+                    console.log("Nombre de la cookie: " + nom_cookie + "; valor de la cookie: " + valor_cookie);
+                    var h1 = document.getElementById("header");
+                    if (nom_cookie=="idioma" && valor_cookie=="castellano") {
+                        h1.innerHTML = "Texto en castellano";
+                    } else if (nom_cookie=="idioma" && valor_cookie=="ingles") {
+                        h1.innerHTML = "Text in English";
+                    }
+                    if (nom_cookie=="color_fons") {
+                        document.body.style.backgroundColor = valor_cookie;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="cargarCookies()">
+        <h1 id="header">Texto en castellano</h1>
+        Para ver el resultado actualiza la página.<br />
+        <button onclick="document.cookie = 'idioma=castellano'; ">Castellano</button>
+        <button onclick="document.cookie = 'idioma=ingles'; ">Inglés</button><br />
+        <button onclick="document.cookie = 'color_fons=red'; ">Rojo</button>
+        <button onclick="document.cookie = 'color_fons=blue'; ">Azul</button>
+        <button onclick="document.cookie = 'color_fons=green'; ">Verde</button>
+    </body>
+</html>

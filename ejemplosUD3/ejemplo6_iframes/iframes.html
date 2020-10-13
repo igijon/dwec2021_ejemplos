@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de municipios</title>
+    </head>
+    <body>
+        <h1>Llista de municipis</h1>
+        <iframe src="http://cifpvirgendegracia.com" name="CIFP Virgend de Gracia" style="height:100px"></iframe>
+        <script>
+            // set onload on element
+            document.getElementsByTagName('iframe')[0].onload = function() {
+                alert('1. Frame cargado del todo')
+            }
+        
+            // set onload on window
+            frames[0].onload = function() {
+                alert('2. Frame cargado del todo')
+            }
+        </script>
+    </body>
+</html>

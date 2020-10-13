@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Comunicació entre finestres</title>
+<script>
+function random_color_in_parent() {
+var color = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+//finestra del pare:
+opener.document.body.style.backgroundColor = color;
+}
+</script>
+</head>
+<body>
+<button onclick="random_color_in_parent();">Canviar el color de la finestra pare</button><br />
+Comptador processat pel pare:
+<p id="comptador"></p>
+</body>
+</html>

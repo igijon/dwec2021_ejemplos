@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Comunicació entre finestres</title>
+<script>
+var i = 0;
+function crear_finestra_filla() {
+var finestra_filla = window.open("comunicacionVentanasH.html", "Comptador", "top=200,left=200,width=200,height=200");
+var myVar=setInterval(function(){ temporitzador(finestra_filla) },1000);
+}
+ 
+function temporitzador(finestra_filla) {
+i++;
+var comptador_fill = finestra_filla.document.getElementById("comptador");
+comptador_fill.innerHTML= i;
+}
+</script>
+</head>
+<body>
+<button onclick="crear_finestra_filla();">Crear la finestra filla</button>
+</body>
+</html>
