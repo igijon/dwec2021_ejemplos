@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <head>
+        <title>Ejemplo Validación de formularios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <LINK REL=StyleSheet HREF="validacion.css" TYPE="text/css" MEDIA=screen>
+        <script src="validacion.js"></script>
+       
+    </head>
+    <body onload="validacion()">
+        <form novalidate>
+            <p>
+            <label for="mail">
+                <span>Por favor, introduzca una dirección de correo electrónico: </span>
+                <input type="email" id="mail" name="mail" required minlength="8">
+                <span class="error" aria-live="polite"></span>
+            </label>
+            </p>
+            <button>Enviar</button>
+        </form>
+    </body>
+</html>
