@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Prueba captcha</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="validacion.js"></script>
+    </head>
+    <body onload="captcha();">
+        <table>
+            <tr>
+                <td>Prueba captcha</td>
+            </tr>
+            <tr>
+                <td>
+                    <canvas id="captcha"></canvas>  
+                    <input type="button" id="refresh" value="Refresh" onclick="captcha();" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="txtInput"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="button1" type="button" value="Check" onclick="alert(validCaptcha('txtInput'));"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
