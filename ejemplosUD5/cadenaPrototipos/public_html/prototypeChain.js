@@ -8,6 +8,26 @@
 var Arma = function(nombre) {
   this.nombre = nombre;
   this.potencia = 1;
+  
+  this.getNombre = function()
+  {
+      return this.nombre;
+  };
+  
+  this.setNombre = function(nombre)
+  {
+      this.nombre = nombre;
+  };
+  
+  this.getPotencia = function()
+  {
+      return this.potencia;
+  };
+  
+  this.setPotencia = function(potencia)
+  {
+      this.potencia = potencia;
+  };  
 };
 
 // Los métodos que añadimos serán compartidos por todas las armas
@@ -40,7 +60,8 @@ var ArmaConMunicion = function(nombre, maxMunicion) {
 
 //Se establece como prototipo de ArmaConMunicion el prototipo del padre
 ArmaConMunicion.prototype = Object.create(Arma.prototype);
-
+//Corregimos el constructor ya que se ha creado a partir del objeto padre
+ArmaConMunicion.prototype.constructor = ArmaConMunicion;
 
 //Aumantamos el prototipo de ArmaConMunición con nuevos métodos
 ArmaConMunicion.prototype.atacar = function(objetivo) {
@@ -70,7 +91,7 @@ pistola.atacar('Zombi');
 var escopetaRecortada = new ArmaConMunicion('Escopeta con cañones recortados', 2);
 escopetaRecortada.atacar = function(objetivo) {
     console.log('Boom! '+this.nombre+' causa ' + this.potencia * 3 + ' puntos de daño a ' + objetivo);    
-}
+};
 
 // Comprobamos el funcionamiento
 escopetaRecortada.atacar('Zombi');
